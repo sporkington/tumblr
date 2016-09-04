@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+    <head>
+        {MobileAppHeaders}
+        <meta charset="utf-8">
+        <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+        {block:Description}
+        <meta name="description" content="{MetaDescription}">
+        {/block:Description}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+        <!-- HTML5 Shiv -->
+        <!--[if lt IE 9]>
+            <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
+        <![endif]-->
+
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{Title}</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="https://cdn.rawgit.com/sporkington/tumblr/gh-pages/stylesheets/normalize.css" />
+	<link rel="stylesheet" href="https://cdn.rawgit.com/sporkington/tumblr/gh-pages/stylesheets/foundation.css" />
+    <style>
+        {CustomCSS}
+    </style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/lightbox.min.js"></script>
+	<script src="js/vendor/modernizr.js"></script>
+	<script src="http://lab.bandit.co.nz/sites/tumblr/bandit-tumblr-featured.js" language="javascript" type="text/javascript"></script>
+
+    </head>
+    <body data-urlencoded-name="{URLEncodedName}" class="{select:Layout}{block:IndexPage} index-page{/block:IndexPage}{block:PermalinkPage} permalink{/block:PermalinkPage}{block:SearchPage} search-page{block:NoSearchResults} no-results{/block:NoSearchResults}{/block:SearchPage}{block:HideHeaderImage} no-header-image{/block:HideHeaderImage}{block:NoStretchHeaderImage} contain-header-image{/block:NoStretchHeaderImage}">
+
+        <header class="fixed">
+            
+        <nav class="small-11 medium-5 columns right">
+			<ul class="button-group show-for-small-only round">
+				<li><a href="index.html" class="button small">Home</a></li>
+				<li><a href="#" class="button small">Illustration</a></li>
+				<li><a href="#" class="button small">Design</a></li>
+				<li><a href="#" class="button small">Videos</a></li>
+			</ul>
+			<ul class="show-for-medium-up">
+				<li><a href="index.html" class="button small radius">Home</a></li>
+				<li><a href="#" class="button small radius">Illustration</a></li>
+					<li><a href="#" class="button small radius">Design</a></li>
+					<li><a href="#" class="button small radius">Videos</a></li>
+				</ul>
+			</nav>
+	    </header>
+
+        <div class="pattern show-for-large-up">
+	    </div>
+        <div class="content">
+            <div class="row">
+                <div class="small-12 columns">
+                    <ul class="small-block-grid-1 medium-block-grid-2 cut featured" id="featured">
+                    </ul>
+                </div>
+                <hr/>
+            </div>
+            <div class="row">
+                <div class="small-block-grid-1 medium-block-grid-2 cut"><h3>Latest</h3>
+        	    
+        			<ul class="small-block-grid-4">
+        	        {block:Posts}
+        	            {block:Photoset}
+                            {block:IndexPage}
+                                    <li class="photos">{block:Photos}
+                                    <img alt="" src="{PhotoURL-250}">
+                                    {/block:Photos}</li>
+                            {/block:IndexPage}
+            
+                            {block:PermalinkPage}
+                                {Photoset-500}
+                            {/block:PermalinkPage}
+                        {/block:Photoset}
+						{block:Photo}
+							<li><img src="{PhotoURL-250}" alt="{PhotoAlt}"/></li>
+						{/block:Photo}
+					{/block:Posts}
+					</ul>
+        			
+    		    	<a href="#" class="button right">More Illustrations &rarr;</a>
+    		    </div>
+		
+		    </div>
+		</div>
+
+	<footer>
+		<div class="row">
+			<div class="columns small-12 medium-6 about border-right">
+				<h3>About Me</h3>
+				    <p>
+					<span class="left profile">{block:ShowAvatar}<img src="{PortraitURL-128}" alt="{Title}">{/block:ShowAvatar}</span>
+					{block:ShowDescription}
+                            {Description}
+                    {/block:ShowDescription}
+                    </p>
+					<a href="#" class="button small center">Read More &darr;</a>
+			</div>
+			<div class="columns small-12 medium-3 contact border-right">
+				<h3>Download my resume</h3>
+					<ul class="small-block-grid-2">
+						<li>
+							<a href="#" class="button expand radius">.DOC</a>
+						</li>
+						<li>
+							<a href="#" class="button expand radius">.PDF</a>
+						</li>
+					</ul>
+				<p class="text-center asap-font">Or send a message through</p>
+				<a href="#" class="button expand radius">Contact Form</a>
+			</div>
+			<div class="columns small-12 medium-3 elsewhere">
+				<h3>Elsewhere</h3>
+					<ul class="small-block-grid-8 medium-block-grid-4 icons">
+						
+					</ul>
+			</div>
+		</div>
+	</footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- <script>!window.jQuery && document.write(unescape('%3Cscript src="http://static.tumblr.com/vr9xgox/sBgmmjhyw/jquery-1.9.1.min.js"%3E%3C/script%3E'));</script>
+        <script src="http://static.tumblr.com/vr9xgox/u3znnyi2n/main-min.js"></script> -->
+
+        {block:IfGoogleAnalyticsID}
+            <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+              ga('create', '{text:Google Analytics ID}', 'auto');
+              ga('send', 'pageview');
+            </script>
+        {/block:IfGoogleAnalyticsID}
+        
+    <script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+    </body>
+</html>
